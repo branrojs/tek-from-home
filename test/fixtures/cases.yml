@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  public_id: MyString
+  status_id: 1
+  action_plan: MyText
+
+two:
+  public_id: MyString
+  status_id: 1
+  action_plan: MyText
