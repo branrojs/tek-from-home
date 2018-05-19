@@ -7,7 +7,7 @@
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%= model_class.human_attribute_name(:manager_email) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,7 +16,7 @@
       <tr>
         <td><%= link_to team.id, team_path(team) %></td>
         <td><%= team.name %></td>
-        <td><%=l team.created_at %></td>
+        <td><%= team.manager_email %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_team_path(team), :class => 'btn btn-default btn-xs' %>
