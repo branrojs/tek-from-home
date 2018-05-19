@@ -45,7 +45,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">TekFromhome</a>
+        <%= link_to "Tek-FromHome", root_path, class:"navbar-brand"  %>
           <div class="navbar-collapse collapse navbar-responsive-collapse">
             <% if current_user and current_user.admin? %>
               <ul class="nav navbar-nav">
