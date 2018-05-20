@@ -83,12 +83,11 @@
         <% if current_user %>
           <div class="col-lg-3">
             <div class="well sidebar-nav">
-              <h3>Sidebar</h3>
+              <h3>Menu</h3>
               <ul class="nav nav-list">
-                <li class="nav-header">Sidebar</li>
-                <li><%= link_to "Link1", "/path1"  %></li>
-                <li><%= link_to "Link2", "/path2"  %></li>
-                <li><%= link_to "Link3", "/path3"  %></li>
+                <li class="nav-header">Actions</li>
+                <li><%= link_to "My cases", cases_path  %></li>
+                <li><%= link_to "My team", "#"  %></li>
               </ul>
             </div><!--/.well -->
           </div><!--/span-->
@@ -96,7 +95,7 @@
       </div><!--/row-->
 
       <footer>
-        <p>&copy; Company 2018</p>
+        <p></p>
       </footer>
 
     </div> <!-- /container -->

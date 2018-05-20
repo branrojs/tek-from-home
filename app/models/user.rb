@@ -4,6 +4,5 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
          
-  has_many :manager_engineers
-  has_many :managers, through: :manager_engineers
+  has_many :cases
 end
