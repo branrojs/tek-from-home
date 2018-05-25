@@ -1,0 +1,17 @@
+<h1> <%= @user.email %>'s Cases</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>public_id </th>
+      <th>status</th>
+      <th>Action plan</th>
+      <th>Created by</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render 'cases/cases', obj: @user.cases %>
+  </tbody>
+</table>
