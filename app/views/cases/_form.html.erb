@@ -39,9 +39,14 @@
 
   <div class="form-group">
     <div class="col-lg-offset-2 col-lg-10">
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-                cases_path, :class => 'btn btn-default' %>
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+        <% if current_user and current_user.admin? %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                    cases_path, :class => 'btn btn-default' %>
+        <% else %>
+          <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                      user_path(current_user), :class => 'btn btn-default' %>
+        <% end %>
     </div>
   </div>
 

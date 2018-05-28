@@ -11,9 +11,13 @@
   <dt><strong><%= model_class.human_attribute_name(:action_plan) %>:</strong></dt>
   <dd><%= @case.action_plan %></dd>
 </dl>
-
-<%= link_to t('.back', :default => t("helpers.links.back")),
-              cases_path, :class => 'btn btn-default'  %>
+<% if current_user and current_user.admin? %>
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+                cases_path, :class => 'btn btn-default'  %>
+<% else %>
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+                  user_path(current_user), :class => 'btn btn-default'  %>
+<% end %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_case_path(@case), :class => 'btn btn-default' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -1,5 +1,6 @@
 class CasesController < ApplicationController
   before_action :set_case, only: [:show, :edit, :update, :destroy]
+  before_action :require_same_user
 
   # GET /cases
   # GET /cases.json
@@ -70,5 +71,12 @@ class CasesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def case_params
       params.require(:case).permit(:public_id, :status_id, :action_plan)
+    end
+    
+    def require_same_user
+      if current_user != @case.user && !current_user.admin?
+        flash[:danger] = "You can't do that action."
+        redirect_to root_path
+      end
     end
 end

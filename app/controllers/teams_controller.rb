@@ -1,5 +1,6 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  #before_action :require_admin
 
   # GET /teams
   # GET /teams.json
@@ -70,5 +71,12 @@ class TeamsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def team_params
       params.require(:team).permit(:name, :manager_email)
+    end
+    
+    def require_admin
+      if current_user and !current_user.admin?
+        flash[:danger] = "Only admin users are able to do that"
+        redirect_to root_path
+      end
     end
 end

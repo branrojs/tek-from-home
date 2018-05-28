@@ -6,6 +6,7 @@
     <td><%= c.action_plan %></td>
     <td><%= c.user.email %></td>
     <td>
+      
       <%= link_to t('.edit', :default => t("helpers.links.edit")),
                   edit_case_path(c), :class => 'btn btn-default btn-xs' %>
       <% if current_user and current_user.admin? %>
