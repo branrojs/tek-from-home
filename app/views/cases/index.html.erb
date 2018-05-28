@@ -16,8 +16,6 @@
   <tbody>
     <% if current_user and current_user.admin? %>
       <%= render 'cases', obj: @cases %>
-    <% else %>
-      <%= render 'cases', obj: @user.cases %>
     <% end %>
   </tbody>
 </table>

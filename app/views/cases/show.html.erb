@@ -16,7 +16,7 @@
                 cases_path, :class => 'btn btn-default'  %>
 <% else %>
   <%= link_to t('.back', :default => t("helpers.links.back")),
-                  user_path(current_user), :class => 'btn btn-default'  %>
+                 mywork_path(current_user), :class => 'btn btn-default'  %>
 <% end %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
               edit_case_path(@case), :class => 'btn btn-default' %>

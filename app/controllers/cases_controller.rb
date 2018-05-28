@@ -1,6 +1,7 @@
 class CasesController < ApplicationController
   before_action :set_case, only: [:show, :edit, :update, :destroy]
-  before_action :require_same_user
+  before_action :require_same_user, only: [:edit, :update, :destroy]
+  before_action :require_admin, only: [:index]
 
   # GET /cases
   # GET /cases.json
@@ -26,7 +27,7 @@ class CasesController < ApplicationController
   # POST /cases.json
   def create
     @case = Case.new(case_params)
-    @case.user = User.last
+    @case.user = current_user
     respond_to do |format|
       if @case.save
         format.html { redirect_to @case, notice: 'Case was successfully created.' }
@@ -76,6 +77,13 @@ class CasesController < ApplicationController
     def require_same_user
       if current_user != @case.user && !current_user.admin?
         flash[:danger] = "You can't do that action."
+        redirect_to root_path
+      end
+    end
+    
+    def require_admin
+      if current_user and !current_user.admin?
+        flash[:danger] = "Only admin users can perform that action"
         redirect_to root_path
       end
     end

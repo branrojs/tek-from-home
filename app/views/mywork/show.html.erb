@@ -1,5 +1,4 @@
-<h1> <%= @user.email %>'s Cases</h1>
-
+<h1> <%= @mywork.email %>'s Cases</h1>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -12,6 +11,9 @@
     </tr>
   </thead>
   <tbody>
-    <%= render 'cases/cases', obj: @user.cases %>
+    <%= render 'cases/cases', obj: @mywork.cases %>
   </tbody>
 </table>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_case_path,
+            :class => 'btn btn-primary' %>

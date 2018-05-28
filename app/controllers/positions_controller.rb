@@ -1,6 +1,6 @@
 class PositionsController < ApplicationController
   before_action :set_position, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_admin
   # GET /positions
   # GET /positions.json
   def index
@@ -70,5 +70,12 @@ class PositionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def position_params
       params.require(:position).permit(:name)
+    end
+    
+    def require_admin
+      if current_user and !current_user.admin?
+        flash[:danger] = "Only admin users can perform that action"
+        redirect_to root_path
+      end
     end
 end
