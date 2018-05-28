@@ -1,0 +1,20 @@
+#start the server at 0.0.0.0
+rails s -b $IP -p $PORT
+
+#show the movement on the database migrations
+rake db:migrate:status
+
+
+#generate a migration 
+rails generate migration add_column_to_table key:value
+
+#generate the CRUD for a entity
+rails generate scaffold Table key:value key:value
+
+#show all the routes
+rake routes
+
+#*project route 
+cd ../rails_project/tek-fromhome
+
+#
