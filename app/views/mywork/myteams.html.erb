@@ -1,0 +1,15 @@
+<h1> <%= @myteam.name %></h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Roster</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <%= render 'myteam', obj: @myteam.users %>
+  </tbody>
+</table>
+<%#= link_to t('.new', :default => t("helpers.links.new")),
+            new_case_path,
+            :class => 'btn btn-primary' %>

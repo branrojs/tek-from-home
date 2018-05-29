@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :cases
+  
+  belongs_to :team
+  belongs_to :position
+  
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@tek-experts.com+\z/
   validates :email, format: { with: VALID_EMAIL_REGEX }
 end

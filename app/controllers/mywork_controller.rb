@@ -3,9 +3,11 @@ class MyworkController < ApplicationController
 
   
   def show
-    @mywork = User.find(params[:id])
+    @mywork = User.find(current_user.id)
   end
   
-  
+  def myteams
+    @myteam = Team.find(current_user.team_id)
+  end
   
 end

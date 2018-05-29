@@ -1,0 +1,19 @@
+ <% obj.each do |c| %>
+  <tr>
+   <%#= link_to c.id, case_path(c) %>
+    <td><%= c.email %></td>
+    <% if current_user and current_user.admin? %>
+        <td>
+          
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_case_path(c), :class => 'btn btn-default btn-xs' %>
+         
+            <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                        case_path(c),
+                        :method => :delete,
+                        :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                        :class => 'btn btn-xs btn-danger' %>
+        </td>
+    <% end %>
+  </tr>
+<% end %>
