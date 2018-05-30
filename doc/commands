@@ -14,7 +14,9 @@ rails generate scaffold Table key:value key:value
 #show all the routes
 rake routes
 
-#*project route 
-cd ../rails_project/tek-fromhome
 
-#
+#generate models/controller Diagrams with railsroad
+rake diagram:all
+
+#generate db diagram with rails erb
+rake erb

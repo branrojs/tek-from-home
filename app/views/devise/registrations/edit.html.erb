@@ -14,6 +14,18 @@
         <%= f.text_field :name, class: 'form-control' %>
       </div>
       <div class="form-group">
+          <div class="col-md-6 no-padding">
+             <%= f.label :team_id %>
+             <%= f.select(:team_id, Team.all.collect {|u| [u.name, u.id]}, {:prompt => 'Select'}, { :class => 'form-control col-md-3' })%>
+          </div>
+          <div class="col-md-6 no-padding left-padding">
+             <%= f.label :position_id %>
+             <%= f.select(:position_id, Position.all.collect {|u| [u.name, u.id]}, {:prompt => 'Select'}, { :class => 'form-control col-md-3' }) %>
+          </div>
+      </div>
+      
+      <div class="form-group">
+        <br><br>
         <%= f.label :password %> <i>(<%= t('.leave_blank_if_you_don_t_want_to_change_it', default: "leave blank if you don't want to change it") %>)</i>
         <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
       </div>
