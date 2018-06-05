@@ -39,14 +39,15 @@
   <body>
     <% unless (controller_name=="registrations" && action_name=='new') || (controller_name=="sessions" && action_name=='new')%>
       <div class="navbar navbar-default navbar-static-top">
-        <div class="container">
+        <div class="container-fluid">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <%= link_to root_path, class:"navbar-brand" do %>
-           <%= image_tag "logo1.png"%>
+          <%#= link_to "Tek-From-Home", root_path, class:"navbar-brand "%>
+          <%= link_to root_path, class:"navbar-brand " do %>
+           <%= image_tag "logo3.png"%>
           <% end %>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
               <% if current_user and current_user.admin? %>
