@@ -1,3 +1,44 @@
+$blueck: #4899c8;
+$whiteck: #fff;
+
+.panel-default-checknow-blue{
+  background: $blueck;
+  height : 65rem;
+  
+  @media only screen and (max-width: 1690px){
+      height : 65rem;
+  }
+  
+  .panel-body{
+    border-radius:5px;
+    margin-top: 3rem;
+    background: $whiteck;
+    
+    .btn-lg{
+      margin-top: 5px;
+      width: 42rem;
+    }
+   
+  }
+  
+}
+
+ @media only screen and (max-width: 1600px){
+   .panel-default-checknow-blue{
+      height : 50rem;
+      
+      .panel-body{
+        .btn-lg{
+          width: 33rem;
+        }
+      }
+    }
+  }
+
+.panel-default-checknow-white{
+  background: $whiteck;
+  height : 28rem;
+}
 .user-name {
 
   padding: 0 !important ;
@@ -30,6 +71,12 @@ a {
 
   padding-left: 0;
 
+}
+
+.navbar-brand{
+  img{
+    width:18rem;
+  }
 }
 
 .nav.navbar-right {

@@ -1,0 +1,64 @@
+.panel-default-checknow-blue {
+  background: #4899c8;
+  height: 65rem; }
+  .panel-default-checknow-blue .panel-body {
+    margin-top: 3rem;
+    background: #fff; }
+    .panel-default-checknow-blue .panel-body .btn-lg {
+      width: 42rem; }
+    @media only screen and (max-width: 1600px) {
+      .panel-default-checknow-blue .panel-body .btn-lg {
+        width: 33rem; } }
+
+.panel-default-checknow-white {
+  background: #fff;
+  height: 28rem; }
+
+.user-name {
+  padding: 0 !important;
+  padding-left: 5px;
+  padding-top: 15px !important;
+  text-align: center; }
+  .user-name a {
+    color: black !important;
+    margin: 0 !important;
+    padding: 5px !important; }
+  .user-name a:hover, .user-name a:focus {
+    color: #000 !important; }
+
+.logout {
+  padding-left: 0; }
+
+.nav.navbar-right {
+  padding-bottom: 10px;
+  padding-top: 5px; }
+
+.nav.navbar-nav .navbar-link {
+  border-radius: 5px;
+  color: #fff;
+  margin-top: 15px;
+  padding: 8px; }
+.nav.navbar-nav .navbar-link:focus, .nav.navbar-nav .navbar-link:hover {
+  background: #3071a9;
+  color: #fff; }
+.nav.navbar-nav li a {
+  margin-right: 5px; }
+
+.nav.navbar-right li .btn {
+  color: #fff !important;
+  margin-top: 5%; }
+.nav.navbar-right li .btn-danger:hover, .nav.navbar-right li .btn-danger:focus {
+  background-color: #a02622 !important; }
+.nav.navbar-right li .btn-primary:hover, .nav.navbar-right li .btn-primary:focus {
+  background-color: #245682 !important; }
+
+.btn-primary:visited, .btn-danger:visited {
+  color: #fff; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.left-padding {
+  padding-left: 15px !important; }
+
+/*# sourceMappingURL=custom.css.css.map */
