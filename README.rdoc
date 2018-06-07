@@ -3,7 +3,7 @@
 This tool is one of my works, it is a simple platform where you can control the WFH of your workers, 
 if you have a team or managers, you can adjust it for your needs or we can talk and make some changes.
 
-  <h3> Info </h3>
+== Info 
 
 * Ruby version : 2.3.4
 
