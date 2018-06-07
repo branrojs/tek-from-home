@@ -1,28 +1,29 @@
-== README
+== TekFromhome
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This tool is one of my works, it is a simple platform where you can control the WFH of your workers, 
+if you have a team or managers, you can adjust it for your needs or we can talk and make some changes.
 
-Things you may want to cover:
+  === Info
 
-* Ruby version
+* Ruby version : 2.3.4
 
-* System dependencies
+* Rails version: 4.2.5
 
-* Configuration
+* Configuration: no need to config, in a future it will exist a seeds file.
 
-* Database creation
+* Database creation | initialization : Run the rake db:migration. 
 
-* Database initialization
+* Databases : Development => SQLite3 Prod => Postgres
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
 * Deployment instructions
 
-* ...
+  * Create a container in C9 with the github (fork/clone it) 
+  * Run the rake commands
+  * rails s -b $IP -p $PORT
+  
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Good Luck! 
+<tt>Brandon Rojas Sanabria</tt>
+  

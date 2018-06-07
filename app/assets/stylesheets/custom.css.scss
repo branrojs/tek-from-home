@@ -1,6 +1,21 @@
 $blueck: #4899c8;
 $whiteck: #fff;
 
+.blue-body{
+  background: $blueck;
+  
+}
+
+.white-body{
+  background : $whiteck;
+  border-radius: 5px;
+  padding-top: 2rem;
+}
+
+.table{
+ background: $whiteck; 
+}
+
 .panel-default-checknow-blue{
   background: $blueck;
   height : 65rem;
@@ -38,6 +53,10 @@ $whiteck: #fff;
 .panel-default-checknow-white{
   background: $whiteck;
   height : 28rem;
+  
+  img{
+    width: 35rem;
+  }
 }
 .user-name {
 
