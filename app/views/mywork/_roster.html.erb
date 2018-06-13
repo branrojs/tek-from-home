@@ -1,9 +1,11 @@
- <% obj.each do |c| %>
+<% obj.each do |c| %>
   <tr>
    <%#= link_to c.id, case_path(c) %>
     <td><%= c.name %></td>
-    <td><%= c.email %></td>
-    <% if (current_user and current_user.admin?) || (current_user and current_user.position.name == "Manager") %>
+    <td><%= c.position.name %></td>
+    <td><%= c.team.name %></td>
+    <td><%= c.updated_at %></td>
+    <% if current_user and current_user.admin? %>
         <td>
           
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

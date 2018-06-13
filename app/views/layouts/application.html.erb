@@ -46,7 +46,7 @@
             <span class="icon-bar"></span>
           </button>
           <%#= link_to "Tek-From-Home", root_path, class:"navbar-brand "%>
-          <% unless (controller_name=="welcome" && action_name=='index')%>  
+          <% unless (!current_user)%>  
             <%= link_to root_path, class:"navbar-brand " do %>
              <%= image_tag "logo3.png"%>
             <% end %>
@@ -57,6 +57,7 @@
                   <li><%= link_to "Teams", teams_path  %></li>
                   <li><%= link_to "Positions", positions_path  %></li>
                   <li><%= link_to "Cases", cases_path  %></li>
+                  <li><%= link_to "Users", alluser_path  %></li>
                 </ul>
               <% end %>
               <ul class="nav navbar-right col-md-4">

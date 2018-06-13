@@ -82,7 +82,7 @@ class CasesController < ApplicationController
     end
     
     def require_admin
-      if current_user and !current_user.admin?
+      if (current_user and !current_user.admin?) || (current_user and !current_user.position.name == "Manager")
         flash[:danger] = "Only admin users can perform that action"
         redirect_to root_path
       end
