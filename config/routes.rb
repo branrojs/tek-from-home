@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get 'myteam', to: 'mywork#myteams'
   get 'mycases', to: 'mywork#show'
   get 'alluser', to: 'mywork#alluser'
+  post 'update_status', to: 'welcome#update_status'
  
 end
