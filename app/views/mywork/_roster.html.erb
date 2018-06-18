@@ -2,8 +2,8 @@
   <tr>
    <%#= link_to c.id, case_path(c) %>
     <td><%= c.name %></td>
-    <td><%= c.position.name %></td>
-    <td><%= c.team.name %></td>
+    <td><%= c.position.nil? ? "not assinged" : c.position.name %></td>
+    <td><%= c.team.nil? ? "not assinged" : c.team.name %></td>
     <td><%= c.updated_at %></td>
     <% if current_user and current_user.admin? %>
         <td>

@@ -15,7 +15,11 @@
   </thead>
   <tbody>
     <% if current_user and current_user.admin? %>
-      <%= render 'cases', obj: @cases %>
+      <% if @cases.nil? %>
+       <h1>There are no cases yet</h1>
+      <% else %>
+       <%= render 'cases', obj: @cases %>
+      <% end %>
     <% end %>
   </tbody>
 </table>

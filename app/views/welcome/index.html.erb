@@ -22,7 +22,7 @@
         <div class="well text-center">
           <h2>When you feel ready to start, push the button!</h1>
           <%= button_to current_user.status ? "Check-in" : "Check-out" , { action: "update_status" }, class: current_user.status ? "btn btn-lg btn-success" : "btn btn-lg btn-danger" %>
-          <h3><small>Your current state is <strong><%= current_user.status ? "Active" : "Inactive" %></strong></small></h3>
+          <h3><small>Your current state is <strong><%= current_user.status ? "Inactive" : "Active" %></strong></small></h3>
         </div>
     <% end %>
  
