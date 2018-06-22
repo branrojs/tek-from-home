@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "TekFromhome" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : "CheKNow" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag "application", :media => "all" %>
@@ -95,20 +95,20 @@
             </div>
           </div>
         <% end %>
-            
-            
             <%= yield %>
           </div>
           <% if current_user %><!--side menu-->
             <div class="col-lg-2">
-              <div class="well sidebar-nav">
-                <h3>Menu</h3>
-                <ul class="nav nav-list">
-                  <li class="nav-header">Actions</li>
-                  <li><%= link_to "My cases", mycases_path  %></li>
-                  <li><%= link_to "My team", myteam_path  %></li>
-                </ul>
-              </div><!--/.well -->
+              <% if !current_user.status %>
+                <div class="well sidebar-nav">
+                  <h3>Menu</h3>
+                  <ul class="nav nav-list">
+                    <li class="nav-header">Actions</li>
+                    <li><%= link_to "My cases", mycases_path  %></li>
+                    <li><%= link_to "My team", myteam_path  %></li>
+                  </ul>
+                </div><!--/.well -->
+              <% end %>
             </div><!--/span-->
           <% end %><!--/side menu-->
         </div><!--/row-->
