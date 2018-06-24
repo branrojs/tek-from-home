@@ -7,7 +7,7 @@ class Notifier < ApplicationMailer
     
     puts "WE ARE SENDING THE STARTING MAIL FUCKER!"
     
-    mail(to: "branrojs@gmail.com",
+    mail(to: m_email_address,
          subject: "An Engineer has started to work today")
   end
   
@@ -16,7 +16,7 @@ class Notifier < ApplicationMailer
     @workhour = hour_f
     
     puts "WE ARE SENDING THE STARTING MAIL FUCKER!"
-    mail(to: "branrojs@gmail.com",
+    mail(to: m_email_address,
          subject: "An Engineer has finished to work for today")
   end
   
