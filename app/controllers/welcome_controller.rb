@@ -10,12 +10,12 @@ class WelcomeController < ApplicationController
       @user.status = false
       @user.save
       flash[:notice] = "You have started your chieft today"
-      Notifier.manager_notification_s(current_user.team.manager_email, current_user.name, Time.now)
+      Notifier.manager_notification_s(current_user.team.manager_email, current_user.name, Time.zone.now).deliver
     else
       @user.status = true
       @user.save
       flash[:notice] = "You have ended your chieft today"
-      Notifier.manager_notification_f(current_user.team.manager_email, current_user.name, Time.now)
+      Notifier.manager_notification_f(current_user.team.manager_email, current_user.name, Time.zone.now).deliver
     end
     
     redirect_to root_path
