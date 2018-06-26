@@ -5,6 +5,7 @@ class CreateReports < ActiveRecord::Migration
       t.timestamps :finished_at
       t.references :user, index: true, foreign_key: true
       t.references :team, index: true, foreign_key: true
+      t.boolean :read, default: false
 
       t.timestamps null: false
     end

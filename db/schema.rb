@@ -29,10 +29,11 @@ ActiveRecord::Schema.define(version: 20180626160930) do
   end
 
   create_table "reports", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.integer  "user_id"
     t.integer  "team_id"
+    t.boolean  "read",       default: false
   end
 
   add_index "reports", ["team_id"], name: "index_reports_on_team_id"
