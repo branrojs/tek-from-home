@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  created_at: 
+  finished_at: 
+  user_id_id: 
+  team_id_id: 
+
+two:
+  created_at: 
+  finished_at: 
+  user_id_id: 
+  team_id_id: 

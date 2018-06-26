@@ -15,14 +15,17 @@
             This tool have a module for the employees as well, they can have a control of the cases they are working and, at the end 
             of the shift, they can send a report to the manager.
           </h4>
+          <%= link_to('Sign In', new_user_session_path, class: 'btn btn-primary', title: 'Sign In') %>
+          <%= link_to('Sign up', new_user_registration_path, class: 'btn btn-primary', title: 'Sign In') %>
         </div>
     <% else %>
-      <div class="col-lg-10">
+      <div class="well col-lg-10">
         <h1 class="text-center">Welcome <%= current_user.name %> </h1>
-        <div class="well text-center">
+        <div class=" text-center">
           <h2>When you feel ready to start, push the button!</h1>
           <%= button_to current_user.status ? "Check-in" : "Check-out" , { action: "update_status" }, class: current_user.status ? "btn btn-lg btn-success" : "btn btn-lg btn-danger" %>
           <h3><small>Your current state is <strong><%= current_user.status ? "Inactive" : "Active" %></strong></small></h3>
+          
         </div>
     <% end %>
  

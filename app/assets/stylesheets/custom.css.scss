@@ -10,7 +10,8 @@ $whiteck: #fff;
   background : $whiteck;
   border-radius: 5px;
   padding-top: 2rem;
-  
+  padding-left: 28px;
+  padding-bottom: 28px;
   .welcomepic{
    width: calc(40rem); 
   }
@@ -199,4 +200,16 @@ a {
   height: 7rem;
   font-size: 2rem;
   width: 45rem;
+}
+
+.nav.nav-list{
+  li{
+    a{
+      &:hover{
+        background-color: #4899c9 !important;
+        border-radius: 5px;
+      }
+      
+    }
+  }
 }

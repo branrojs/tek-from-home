@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
  
   
+  resources :reports, :only => [:index, :show]
   resources :teams
   resources :cases
   resources :positions

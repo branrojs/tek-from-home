@@ -5,7 +5,12 @@ class MyworkController < ApplicationController
   end
   
   def myteams
-    @myteam = Team.find(current_user.team_id)
+    if current_user.team_id.nil? || current_user.position_id.nil?
+      flash[:danger] = "You don't have a team/position assigned, wait until your manager assign you a position."
+      redirect_to root_path
+    else
+      @myteam = Team.find(current_user.team_id)
+    end
   end
   
   def alluser

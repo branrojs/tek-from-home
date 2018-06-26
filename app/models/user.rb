@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :cases
+  has_many :reports
   
   belongs_to :team
   belongs_to :position
