@@ -28,6 +28,8 @@
           <h2>When you feel ready to start, push the button!</h1>
           <%= button_to current_user.status ? "Check-out" :"Check-in"  , { action: "update_status" }, class: current_user.status ? "btn btn-lg btn-danger" : "btn btn-lg btn-success" %>
           <h3><small>Your current state is <strong><%= current_user.status ? "Active" :"Inactive" %></strong></small></h3>
+          
+          <p>Remember, if this is the first time here, you need to assing a team and a position at <%= link_to current_user.name, edit_user_registration_path %></p>
         </div>
     <% end %>
  

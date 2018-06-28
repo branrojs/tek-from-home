@@ -7,6 +7,11 @@ class WelcomeController < ApplicationController
   end
   
   def update_status
+    if current_user.postion.nil?
+      flash[:error] = "You have declare your position and your team to do that"
+      redirect_to root_path
+    end
+      
     @user = User.find(current_user.id)
     if @user.status
       @report = Report.where(user_id: current_user.id, date: Time.zone.now.to_date)
