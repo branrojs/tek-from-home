@@ -12,6 +12,35 @@
   <dd><%= @report.read ? "This report will be mark as read after you finish to see it" : "" %></dd>
 </dl>
 
+<% if @report.user.cases.nil? %>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>id </th>
+      <th>status</th>
+      <th>Action plan</th>
+    </tr>
+  </thead>
+  <tbody>
+     <% @report.user.cases.each do |c| %>
+       <% if c.created_at.to_date.eql? @report.created_at.to_date %>
+        <tr>
+          <td><%= c.public_id %></td>
+          <td><%= c.status_id %></td>
+          <td><%#= c.action_plan %></td>
+          <td><%=  %></td>
+          <td>
+          </td>
+        </tr>
+       <% end %>
+      <% end %>
+  </tbody>
+</table>
+<% else %>
+  <h3>No cases to report</h3>
+<% end %>
+
+
 <%= link_to t('.back', :default => t("helpers.links.back")),
               reports_path, :class => 'btn btn-default'  %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),

@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20180626160930) do
   create_table "reports", force: :cascade do |t|
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+    t.string   "date"
     t.integer  "user_id"
     t.integer  "team_id"
     t.boolean  "read",       default: false
