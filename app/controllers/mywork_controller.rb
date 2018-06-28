@@ -1,6 +1,10 @@
 class MyworkController < ApplicationController
   
   def show
+    if current_user.position.nil? || current_user.team.nil?
+      flash[:error] = "You have declare your position and your team to do that"
+      redirect_to root_path
+    end
     @mywork = User.find(current_user.id)
   end
   
