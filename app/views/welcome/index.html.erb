@@ -21,7 +21,7 @@
     <% else %>
       <div class="well col-lg-10 text-center">
         <h1>Welcome <%= current_user.name %> </h1>
-        <% if !current_user.position.nil? current_user.position.name == "Manager" %>
+        <% if !current_user.position.nil? && current_user.position.name == "Manager" %>
           <h3>Manager!<small> You have <%= @reports.count %> new reports unread</small></h2>
         <% end %>
         <div >
